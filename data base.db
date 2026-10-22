@@ -1,0 +1,15 @@
+from plyer import notification
+import pyttsx3
+
+engine = pyttsx3.init()
+
+medicine = "Paracetamol"
+
+notification.notify(
+    title="Medicine Reminder",
+    message=f"Time to take {medicine}",
+    timeout=10
+)
+
+engine.say(f"Time to take {medicine}")
+engine.runAndWait()
